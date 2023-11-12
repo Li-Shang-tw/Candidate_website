@@ -1,0 +1,24 @@
+@import "./reset.css";
+
+/*-----color-variable----*/
+:root {
+  --main-bg-color: #cddf20;
+  --secondary-bg-color: #e6e6e6;
+  --font-black: #000000;
+  --font-white: white;
+}
+
+/*---font-style----*/
+@font-face {
+  font-family: "GenSekiGothic";
+  src: url("./fonts/genseki-font-master/GenSekiGothic-R.ttc") format("truetype");
+}
+@font-face {
+  font-family: "futur";
+  src: url("./fonts/futura/futur.ttf") format("truetype");
+}
+
+/*----typography--*/
+body {
+  font-family: "GenSekiGothic";
+}
