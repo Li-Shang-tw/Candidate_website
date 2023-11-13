@@ -32,5 +32,14 @@ h3 {
   font-size: 1.17rem;
 }
 h4 {
-  font-size: 1rem;
+  font-size: 1.5rem;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  margin: 0 auto;
+  width: 90%;
 }
