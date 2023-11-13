@@ -1,4 +1,5 @@
 <script setup>
+import TheDonate from "./components/TheDonate.vue";
 import TheHeader from "./components/TheHeader.vue";
 import ThePersonalIntro from "./components/ThePersonalIntro.vue";
 </script>
@@ -6,6 +7,7 @@ import ThePersonalIntro from "./components/ThePersonalIntro.vue";
 <template>
   <TheHeader />
   <ThePersonalIntro />
+  <TheDonate />
 </template>
 
 <style scoped></style>

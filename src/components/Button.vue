@@ -21,6 +21,7 @@ const props = defineProps(["text", "type"]);
   padding: 0.5em 1.5em;
   border-radius: 30px;
   gap: 0.5em;
+  background-color: white;
 }
 
 @media (min-width: 600px) {
