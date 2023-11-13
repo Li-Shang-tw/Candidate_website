@@ -4,8 +4,8 @@
 :root {
   --main-bg-color: #cddf20;
   --secondary-bg-color: #e6e6e6;
-  --font-black: #000000;
-  --font-white: white;
+  --black: #000000;
+  --white: white;
 }
 
 /*---font-style----*/
