@@ -26,10 +26,6 @@
 .eyes {
   width: 80%;
 }
-.eyes:hover {
-  animation-name: close;
-  animation-duration: 5s;
-}
 
 .overlay {
   position: absolute;
@@ -59,16 +55,6 @@
   }
   to {
     height: 0px;
-  }
-}
-
-@keyframes close {
-  from {
-    height: 100px;
-  }
-  to {
-    height: 0px;
-    margin-top: 70px;
   }
 }
 </style>
