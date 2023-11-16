@@ -1,97 +1,90 @@
 <template>
   <div class="wrap">
-    <div class="activity_section container">
+    <div class="container activity_section">
       <div class="heading">
-        <h3 class="heading__subtitle subtite">policy</h3>
-        <h2 class="heading__title">政策議題</h2>
+        <h3 class="heading__subtitle subtite">NEWS</h3>
+        <h2 class="heading__title">最新活動</h2>
       </div>
-      <ul class="policy_selection">
-        <li
-          class="policy_selection__btn"
-          @click="
-            () => {
-              ChangePolicy(1);
-            }
-          "
-        >
-          <img
-            src="../../public/img/政策一.png"
-            alt="政策一"
-            :class="{ filter: policy !== 1 }"
-          />
-        </li>
-        <li
-          class="policy_selection__btn"
-          @click="
-            () => {
-              ChangePolicy(2);
-            }
-          "
-        >
-          <img
-            src="../../public/img/政策二.png"
-            alt="政策二"
-            :class="{ filter: policy !== 2 }"
-          />
-        </li>
-        <li
-          class="policy_selection__btn"
-          @click="
-            () => {
-              ChangePolicy(3);
-            }
-          "
-        >
-          <img
-            src="../../public/img/政策三.png"
-            alt="政策三"
-            :class="{ filter: policy !== 3 }"
-          />
-        </li>
-      </ul>
-      <ActivityContent :policy="policy" />
-      <Button type="2" text="了解更多" class="btn" />
+      <ActivityContent :position="position" />
+      <div class="btn_block">
+        <img
+          src="../../public/img/向後.png"
+          alt=""
+          class="btn--back btn_move"
+          @click="() => movePosition('back')"
+        />
+        <span class="position">{{ position }}-3</span>
+        <img
+          src="../../public/img/向前.png"
+          alt=""
+          class="btn--ahead btn_move"
+          @click="() => movePosition('ahead')"
+        />
+      </div>
+      <Button text="所有活動" type="2" />
     </div>
   </div>
 </template>
 
 <script setup>
 import { ref } from "vue";
+
+//元件
 import ActivityContent from "./ActivityContent.vue";
 import Button from "./Button.vue";
 
-const policy = ref(1);
-function ChangePolicy(num) {
-  policy.value = num;
+const position = ref(1);
+
+function movePosition(directon) {
+  if (directon == "ahead") {
+    if (position.value !== 3) {
+      position.value += 1;
+    }
+  } else if (directon == "back") {
+    if (position.value !== 1) {
+      position.value -= 1;
+    }
+  }
 }
 </script>
 
 <style scoped>
 .wrap {
-  background-color: black;
-  padding-bottom: 2em;
-}
-.heading {
+  background-color: var(--secondary-bg-color);
   padding: 2em 0;
 }
+
 .heading__subtitle {
   margin-bottom: 0.5em;
-  color: black;
-  -webkit-text-stroke: 0.7px var(--main-bg-color);
-}
-.heading__title {
-  color: var(--main-bg-color);
+  color: var(--secondary-bg-color);
+  -webkit-text-stroke: 0.7px black;
 }
 
-.policy_selection {
+/*-----btn----*/
+.btn_block {
   display: flex;
-  width: 50%;
-  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  margin: 1em 0;
 }
-.btn {
-  margin-top: 2em;
+.btn_move {
+  width: 40px;
+  height: 40px;
 }
-.filter {
-  filter: brightness(0.5);
+
+@media (min-width: 900px) {
+  .heading {
+    text-align: left;
+    margin-bottom: 2em;
+  }
+
+  .btn_move {
+    width: 60px;
+    height: 60px;
+  }
+  .position {
+    font-size: 1.5em;
+  }
 }
 </style>
