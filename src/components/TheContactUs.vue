@@ -35,7 +35,7 @@
             <textarea class="form_comment" id="comment" />
           </label>
         </div>
-        <Button text="送出表單" type="2" />
+        <Button text="送出表單" type="3" />
       </div>
     </div>
   </div>

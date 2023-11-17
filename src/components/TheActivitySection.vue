@@ -71,6 +71,7 @@ function movePosition(directon) {
 .btn_move {
   width: 40px;
   height: 40px;
+  transition: transform 0.3s;
 }
 
 @media (min-width: 900px) {
