@@ -53,6 +53,7 @@ const donateStore = useDonateStore();
   width: 70%;
   margin: 0 auto;
 }
+
 .heading {
   padding: 2em 0;
 }
@@ -74,6 +75,9 @@ const donateStore = useDonateStore();
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+  }
+  .donate_option {
+    width: 50%;
   }
 }
 </style>

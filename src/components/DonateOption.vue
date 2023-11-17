@@ -5,7 +5,7 @@
     <h4 class="title" v-if="plan == 'lv1'">喵星人之友</h4>
     <h4 class="title" v-else-if="plan == 'lv2'">喵星大使</h4>
     <h4 class="title" v-else-if="plan == 'lv3'">喵星傳奇</h4>
-    <h4 class="title" v-else-if="plan == 'cutomize'">自訂贊助金額</h4>
+    <h4 class="title" v-else-if="plan == 'cutomize'">自訂金額</h4>
     <div class="donate__price">
       <h4 class="price-prefix">NT$</h4>
       <h4 class="price" v-if="plan == 'lv1'">600</h4>
@@ -13,7 +13,7 @@
       <h4 class="price" v-else-if="plan == 'lv3'">60000</h4>
       <p v-else-if="plan == 'cutomize'">_____________</p>
     </div>
-    <Button text="我要贊助" type="2" />
+    <Button text="我要贊助" type="2" class="donate_btn" />
   </div>
 </template>
 
@@ -30,7 +30,8 @@ const props = defineProps(["value", "plan"]);
   display: inline-flex;
   flex-direction: column;
   gap: 1em;
-  padding: 1.5em 3em;
+  padding: 1.75em 3.5em;
+  align-items: center;
 }
 .price,
 .price-prefix {
