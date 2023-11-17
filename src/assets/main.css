@@ -58,3 +58,12 @@ img {
   color: transparent;
   -webkit-text-stroke: 0.7px black;
 }
+
+@media (min-width: 900px) {
+  h2 {
+    font-size: 2.5em;
+  }
+  h3 {
+    font-size: 2em;
+  }
+}
