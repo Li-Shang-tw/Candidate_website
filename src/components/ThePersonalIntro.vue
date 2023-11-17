@@ -1,5 +1,5 @@
 <template>
-  <setion class="personal_intro">
+  <div class="personal_intro">
     <div class="donate_icon">
       <img
         src="../../public/img/小額捐款.png"
@@ -41,7 +41,7 @@
     <div class="btn_area">
       <Button text="了解更多" type="2" class="btn" />
     </div>
-  </setion>
+  </div>
 </template>
 
 <script setup>
@@ -52,7 +52,8 @@ import Button from "./Button.vue";
 
 <style scoped>
 .personal_intro {
-  background-color: red;
+  background-color: var(--main-bg-color);
+  padding-bottom: 2em;
 }
 
 .donate_icon {
@@ -97,5 +98,17 @@ import Button from "./Button.vue";
   justify-content: center;
 }
 @media (min-width: 600px) {
+  .photo_area {
+    display: flex;
+    width: 70%;
+    margin: 0 auto;
+  }
+  .personal_info_content {
+    text-align: left;
+  }
+  .donate_icon {
+    width: 50%;
+    margin: 0 1em 0 auto;
+  }
 }
 </style>
